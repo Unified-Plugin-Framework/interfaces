@@ -1,0 +1,49 @@
+{
+  "name": "@unified-plugin-framework/interfaces",
+  "version": "0.0.1",
+  "description": "TypeScript interface definitions for the Unified Plugin Framework",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "proto"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "lint": "eslint src/",
+    "test": "bun test",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "upf",
+    "unified-plugin-framework",
+    "interfaces",
+    "typescript",
+    "grpc",
+    "plugin"
+  ],
+  "author": "Unified Plugin Framework Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Unified-Plugin-Framework/interfaces.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Unified-Plugin-Framework/interfaces/issues"
+  },
+  "homepage": "https://unified-plugin-framework.github.io/docs/specifications/interfaces",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  }
+}
